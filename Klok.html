@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+        #textarea{
+            color:#00ff24;
+            border:none;
+            font-family: "Inconsolata";
+            font-size:14px;
+            resize:none;
+            box-sizing:border-box;
+            overflow-x:hidden;
+        }
+        #horloge{
+            position:fixed;bottom:300px;left:400px;
+            color: #000101;
+            font-size:80px;
+            font-family: 'Orbitron';
+        }
+        #horloge > span {
+            display:inline-block;
+            width:180px;
+            height:180px;
+            text-align:center;
+            padding-top:34px;
+            box-sizing:border-box;
+            border:1px solid #262626;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+
+            var text,
+                value,
+                char = 0;
+
+            $.get('code.txt', function(data) {
+
+                text = data;
+                function scrollToBottom() {
+                    $('#textarea').scrollTop($('#textarea')[0].scrollHeight);
+                }
+                setInterval(function(){
+                    scrollToBottom()
+                    value = value + text[char];
+                    if(value.length >= text.length){
+                        value = "";
+                        char = 0;
+                    }else{
+                        $("#textarea").val(value + "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+                        char++;
+                    }
+                },10);
+
+            }, 'text');
+
+            var hours,minutes,seconds;
+
+            var date = new Date
+            hours = date.getHours();
+            minutes = date.getMinutes();
+            seconds = date.getSeconds();
+
+            $("#houres").html((hours < 10) ? "0" + hours : hours);
+            $("#minutes").html((minutes < 10) ? "0" + minutes : minutes);
+            $("#seconds").html((seconds < 10) ? "0" + seconds : seconds);
+
+            setInterval(function(){
+
+                if(hours === 24)
+                    hours = 0;
+                if(minutes === 60){
+                    minutes = 0;
+                    hours++;
+                }
+                if(seconds === 60){
+                    seconds = 0;
+                    minutes++;
+                }
+                $("#houres").html((hours < 10) ? "0" + hours : hours);
+                $("#minutes").html((minutes < 10) ? "0" + minutes : minutes);
+                $("#seconds").html((seconds < 10) ? "0" + seconds : seconds);
+                seconds++;
+            },1000);
+        })
+
+    </script>
+</head>
+<body>
+<body>
+<div id="horloge">
+    <span id="houres">00</span> :
+    <span id="minutes">00</span> :
+    <span id="seconds">00</span>
+</div>
+</body>
+</html>
