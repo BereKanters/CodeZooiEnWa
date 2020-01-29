@@ -53,10 +53,14 @@
         <br />from the depths,<br />carrying<br />only<br />your<br />one wound,<br />but resurgent,<br />always renewed,<br />locked into the current,<br />fins fletched<br />like wings<br />in the torrent,<br />in the coursing<br />of<br />the<br />underwater<br />dark,<br />like a grieving arrow,<br />sea-javelin, a nerveless<br />oiled harpoon.</p>
     <p>Dead<br />in front of me,<br />catafalqued king<br />of my own ocean;<br />once<br />sappy as a sprung fir<br />in the green turmoil,<br />once seed<br />to sea-quake,<br />tidal wave, now<br />simply<br />dead remains;<br />in the whole market<br />yours<br />was the only shape left<br />with purpose or direction<br />in this<br />jumbled ruin<br />of nature;<br />you are<br />a solitary man of war<br />among these frail vegetables,<br />your flanks and prow<br />black<br />and slippery<br />as if you were still<br />a well-oiled ship of the wind,<br />the only<br />true<br />machine<br />of the sea: unflawed,<br />undefiled,<br />navigating now<br />the waters of death.</p>
 </article>
+
+<!-- Automatic Date Picker -->
 <footer>
     <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script>, Bere kanters</p>
 </footer>
 </body>
+
+<!-- Java/NavbarScroll -->
 <script>
     window.onscroll = () => {
         const nav = document.querySelector('#navbar');
