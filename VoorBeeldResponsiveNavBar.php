@@ -34,7 +34,7 @@
 
         <hr> <!-- Tussen Spatie -->
 
-        <!-- Social Links en nog wat -->
+        <!-- Social Links -->
         <div class="social-links">
             <a href="https://github.com/JeDing" target="_blank" class="github-link"><i class="fa fa-github" aria-hidden="true"></i></a>
             <a href="https://facebook.com/jenaam" target="_blank" class="fcc-link"><i class="fa fa-facebook" aria-hidden="true"></i></a>
